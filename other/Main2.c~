@@ -1,0 +1,66 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <fcntl.h>
+#include <sys/types.h> 
+#include <unistd.h> 
+
+
+int main(void)
+{
+char* ch1, ch2;
+int c,i,tim,k;
+//char ch[10];
+FILE *fp;
+fp=fopen("file.t","r");
+i=0;
+//Подсчитаем количество строчек
+ while (c!=-1)
+	{
+	c = getc (fp);
+	if ((c == '\n')||(c==-1)) ++i;
+	//printf("%c", c);
+	}
+/*printf("\n");
+printf("%d", i);*/
+printf("Строки подсчитали\n");
+
+//Перезакроем файл (указатель в начало файла)
+fclose(fp);
+fp=fopen("file.t","r");
+//
+
+k=0; 
+c=10;
+printf("Создали структуру\n");
+struct Item 
+	{
+	int time;
+	char ff[10];
+	} h[i];
+printf("OK\n");
+//Заносим информацию о файлах в массив
+do
+	{
+	k++;
+	fscanf (fp,"%i %s",&tim, &(h[k].ff)[0]);
+	h[k].time=tim;
+
+
+	printf("%d\n", h[k].time);
+	printf("%s\n", h[k].ff);
+	
+	/*printf("OKn\");*/
+	}
+while (k!=i);
+ch1="./f1.pr";
+printf("OK\n");
+strcat(ch1, h[1].ff[1]);
+
+printf("OK\n");
+system(ch1);
+printf("OK\n");
+
+printf("\n");
+return 0;
+}
+

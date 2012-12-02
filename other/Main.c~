@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <fcntl.h>
+#include <sys/types.h> 
+#include <unistd.h> 
+//struct tree_s {
+//	struct tree *left;
+//	struct tree *right;
+//	char* word;
+//	int count;
+//};
+
+main(void)
+{
+int i,k,m;
+char**ch;
+for (i=0;i<10;i++)
+    ch[i]=*ch(10);
+i = open("./file.t",O_RDWR,0);
+char buf[10];
+k=0;
+
+while (not EOF){
+//	lseek(i,k,SEEK_SET);
+//	m=read(i,buf,1);	
+//	buf[1]='\n';
+	++k;
+	printf(buf);
+	fscanf("%s",ch[k]);	
+	};
+
+
+}
+
